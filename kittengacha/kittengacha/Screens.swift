@@ -12,6 +12,7 @@ class Screens: ObservableObject {
     @Published var screenNumber = 0
     @Published var userStats = UserStats()
     
+    //saves user data
     init() {
         let defaults = UserDefaults.standard
         
@@ -24,6 +25,7 @@ class Screens: ObservableObject {
     }
 }
 
+//layout for adopt screen
 func tabView(_ screenNumber: Screens) -> some View {
     ZStack {
         Image("clouds")

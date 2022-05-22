@@ -20,6 +20,7 @@ struct CollectionView: View {
     @State var waterCount = 0
     
     func initalVals() {
+        //tracks what user has pulled in collection
         for i in screenNumber.userStats.collection {
             if i == "hairless cat" {
                 hairlessCount += 1
@@ -41,6 +42,7 @@ struct CollectionView: View {
         }
     }
     
+    //collection table
     var body: some View {
         ScrollView {
             VStack(spacing: 1.0) {
@@ -95,7 +97,7 @@ struct CollectionView: View {
 struct Tile : View {
     var name: String
     var num: Int
-    
+    //images of reward within table
     var body: some View {
         VStack {
             Spacer()

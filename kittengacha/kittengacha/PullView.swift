@@ -65,11 +65,6 @@ struct PullView: View {
                 Divider()
                 //.ignoresSafeArea(edges: .top)
                     ZStack() {
-//                            Image("pity-count-background")
-//                                .resizable()
-//                                .scaledToFit()
-//                                //.clipped()
-//                                .listRowInsets(EdgeInsets())
                         Text(test)
                             .font(.title)
                             .foregroundColor(.white)
@@ -87,7 +82,7 @@ struct PullView: View {
                     .offset(y: UIScreen.main.bounds.height / -64)
 
                         Divider()
-
+            //pity tracker
             Text("Current Pity: \n" + variables.pc)
                             .font(.title2)
                             .multilineTextAlignment(.center)
@@ -102,7 +97,7 @@ struct PullView: View {
             }
         
                 .padding()
-        
+        //bottom bar
         ZStack {
             Image("clouds")
                 .resizable()

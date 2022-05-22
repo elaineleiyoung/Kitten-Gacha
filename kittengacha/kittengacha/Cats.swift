@@ -25,9 +25,10 @@ class Cats {
             
     //pulls a cat for a user
     func catPuller() -> String {
-        let random = Double.random(in: 0 ... 1)
+        let random = Double.random(in: 0 ... 1)//generates a random probability
         var r : Int
-        if (pullCount >= hardPity) {
+        //hard pity 
+        if (pullCount >= hardPity) {//resets pull count once 100 pulls are reached and gives 5 star cat automatically
             pullCount = 0
             r = Int.random(in:0 ... (fiveStarList.count - 1))
             return fiveStarList[r]

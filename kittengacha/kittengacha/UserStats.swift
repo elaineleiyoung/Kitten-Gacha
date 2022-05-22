@@ -8,7 +8,7 @@
 import Foundation
 
 struct UserStats: Codable {
-    var steps: Double = 0
+    var steps: Double = 0 //number of steps taken
     var prevLogin: Date = Date()
     var currLogin: Date = Date()
     var collection: [String] = []
