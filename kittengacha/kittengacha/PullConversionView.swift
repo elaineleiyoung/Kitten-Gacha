@@ -22,6 +22,7 @@ struct PullConversionView: View {
     var cat = Cats()
     
     @ObservedObject var screenNumber: Screens
+    //test case
     func testing() {
             screenNumber.userStats.steps = 21050
         }
@@ -32,7 +33,7 @@ struct PullConversionView: View {
                 Text("\(Int(numPaws)) total paws")
             }
             Spacer()
-            if (Int(screenNumber.userStats.steps / 2000 ) <= 0) {
+            if (Int(screenNumber.userStats.steps / 2000 ) <= 0) {//if not enough steps to convert
                 GifImage("crying")
                     .offset(y: UIScreen.main.bounds.height / 4)
                 Text("You do not have enough steps to convert into Paw Prints")
@@ -55,7 +56,7 @@ struct PullConversionView: View {
                         .frame(width: 100)
                 }
                 VStack {
-                    Slider(value: $speed, in: 0...screenNumber.userStats.steps/2000, step: 1) {
+                    Slider(value: $speed, in: 0...screenNumber.userStats.steps/2000, step: 1) {//converts every 2000 steps
                         Text("\(speed)")
                             .foregroundColor(isEditing ? .red : .blue)
                     }
@@ -75,7 +76,7 @@ struct PullConversionView: View {
                         .resizable()
                         .frame(width: UIScreen.main.bounds.width / 3, height: UIScreen.main.bounds.height / 15)
                     Button("Convert Steps") {
-                        screenNumber.userStats.steps -= 2000 * speed
+                        screenNumber.userStats.steps -= 2000 * speed //
                         let defaults = UserDefaults.standard
                         let encoder = JSONEncoder()
                         if let encodedUser = try? encoder.encode(screenNumber.userStats) {
