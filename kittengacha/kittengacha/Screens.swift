@@ -25,7 +25,7 @@ class Screens: ObservableObject {
     }
 }
 
-//layout for adopt screen
+//bottom bar
 func tabView(_ screenNumber: Screens) -> some View {
     ZStack {
         Image("clouds")
